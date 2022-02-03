@@ -14,7 +14,7 @@ mongoose.connect(mongodb_url, {
 // connect to the client url
 const io = require("socket.io")(process.env.PORT || 3001, {
   cors: {
-    origin: "https://hg-doc.herokuapp.com/",
+    origin: "https://hg-doc.herokuapp.com",
     methods: ["GET", "POST"],
   },
 });
