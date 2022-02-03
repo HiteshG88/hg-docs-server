@@ -12,9 +12,9 @@ mongoose.connect(mongodb_url, {
 });
 
 // connect to the client url
-const io = require("socket.io")(3001, {
+const io = require("socket.io")(process.env.PORT || 3001, {
   cors: {
-    origin: process.env.PORT || "http://localhost:3000",
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"],
   },
 });
